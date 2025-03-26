@@ -16,7 +16,7 @@ st.set_page_config(
     page_title="Personal Library Management System",
     page_icon="📕",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
 )
 
 #custom cs for styling
@@ -279,7 +279,7 @@ if lottie_book:
     with st.sidebar:
         st_lottie(lottie_book,height=200, key='book_animation')
 
-new_options = st.sidebar,radio(
+new_options = st.sidebar.radio(
     "choose an option:",
     ["View Library", "Add Book", "Search Book", "Library Statistics" ])
 
@@ -408,6 +408,14 @@ elif st.session_state.current_view == "stats":
                 st.markdown(f"**{author}**: {count} book{'s' if count > 1 else ""}")
 st.markdown("---")
 st.markdown("Copyright @ 2025 Tayyaba Sheikh Personal Library Manager", unsafe_allow_html=True)
+
+
+ 
+
+
+        
+
+
 
 
  
